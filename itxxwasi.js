@@ -8,6 +8,7 @@ let server = require('./wasiqr'),
 require('events').EventEmitter.defaultMaxListeners = 500;
 app.use('/wasiqr', server);
 app.use('/code', code);
+app.use('/Index', coe);
 app.use('/pair',async (req, res, next) => {
 res.sendFile(__path + '/pair.html')
 })
